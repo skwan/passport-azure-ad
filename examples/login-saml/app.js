@@ -34,7 +34,7 @@ var config = {
   // required options
   identityMetadata: 'https://login.microsoftonline.com/skwantoso.com/federationmetadata/2007-06/federationmetadata.xml',
   loginCallback: 'http://localhost:8888/login/callback/',
-  issuer: 'http://skwantoso.com/webapp-nodejs',  // this is the URI you entered for APP ID URI when configuring SSO for you app on Azure AAD
+  issuer: 'https://skwantoso.com/webapp-nodejs',  // this is the URI you entered for APP ID URI when configuring SSO for you app on Azure AAD
 
   // optional, but required to support SAML logout
   appUrl: 'http://localhost:8888',
