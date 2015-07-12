@@ -32,7 +32,7 @@ var app = express();
 
 var config = {
   // required options
-  identityMetadata: 'https://login.microsoftonline.com/dev.skwantoso.com/federationmetadata/2007-06/federationmetadata.xml',
+  identityMetadata: 'https://login.microsoftonline.com/common/federationmetadata/2007-06/federationmetadata.xml',
   loginCallback: 'http://skwantoso-saml-test.cloudapp.net/login/callback/',
   issuer: 'https://dev.skwantoso.com/webapp-nodejs',  // this is the URI you entered for APP ID URI when configuring SSO for you app on Azure AAD
 
