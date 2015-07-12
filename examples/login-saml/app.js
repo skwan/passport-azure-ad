@@ -33,12 +33,12 @@ var app = express();
 var config = {
   // required options
   identityMetadata: 'https://login.microsoftonline.com/skwantoso.com/federationmetadata/2007-06/federationmetadata.xml',
-  loginCallback: 'http://skwantoso-saml-test.cloudapp.net:8888/login/callback/',
+  loginCallback: 'http://skwantoso-saml-test.cloudapp.net/login/callback/',
   issuer: 'https://skwantoso.com/webapp-nodejs',  // this is the URI you entered for APP ID URI when configuring SSO for you app on Azure AAD
 
   // optional, but required to support SAML logout
-  appUrl: 'http://skwantoso-saml-test.cloudapp.net:8888',
-  logoutCallback: 'http://skwantoso-saml-test.cloudapp.net:8888/logout/callback/',
+  appUrl: 'http://skwantoso-saml-test.cloudapp.net',
+  logoutCallback: 'http://skwantoso-saml-test.cloudapp.net/logout/callback/',
   privateCert: fs.readFileSync('./private.pem', 'utf-8'),
   publicCert: fs.readFileSync('./public.pem', 'utf-8'),
 
@@ -48,7 +48,7 @@ var config = {
   contactEmail: 'admin@example.com',
   organizationName: 'Examples, Inc',
   organizationDisplayName: 'Examples, Inc',
-  organizationUrl: 'http://skwantoso-saml-test.cloudapp.net:8888'
+  organizationUrl: 'http://skwantoso-saml-test.cloudapp.net'
 };
 
 // array to hold logged in users
