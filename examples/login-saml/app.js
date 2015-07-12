@@ -32,13 +32,13 @@ var app = express();
 
 var config = {
   // required options
-  identityMetadata: 'https://login.windows.net/GraphDir1.OnMicrosoft.com/federationmetadata/2007-06/federationmetadata.xml',
-  loginCallback: 'http://localhost:3000/login/callback/',
-  issuer: 'http://localhost:3000',  // this is the URI you entered for APP ID URI when configuring SSO for you app on Azure AAD
+  identityMetadata: 'https://login.microsoftonline.com/skwantoso.com/federationmetadata/2007-06/federationmetadata.xml',
+  loginCallback: 'http://localhost:8888/login/callback/',
+  issuer: 'http://skwantoso.com/webapp-nodejs',  // this is the URI you entered for APP ID URI when configuring SSO for you app on Azure AAD
 
   // optional, but required to support SAML logout
-  appUrl: 'http://localhost:3000',
-  logoutCallback: 'http://localhost:3000/logout/callback/',
+  appUrl: 'http://localhost:8888',
+  logoutCallback: 'http://localhost:8888/logout/callback/',
   privateCert: fs.readFileSync('./private.pem', 'utf-8'),
   publicCert: fs.readFileSync('./public.pem', 'utf-8'),
 
@@ -48,7 +48,7 @@ var config = {
   contactEmail: 'admin@example.com',
   organizationName: 'Examples, Inc',
   organizationDisplayName: 'Examples, Inc',
-  organizationUrl: 'http://localhost:3000'
+  organizationUrl: 'http://localhost:8888'
 };
 
 // array to hold logged in users
@@ -93,7 +93,7 @@ app.engine('ejs', engine);
 
 // configure Express
 app.configure(function() {
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 8888);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.favicon());
